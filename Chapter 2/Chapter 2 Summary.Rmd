@@ -27,17 +27,22 @@ load("~/math247/ISCAM.RData")
 (Uniform)
 <br>
 
-- The sample data come from a well-designed random population or randomized experiment of size $n$ with mean $\mu$ and standard deviation.
-  + The mean will be equal to $\mu$.
-  + The standard deviation is equal to $\frac{\sigma}{\sqrt{n}}$ (we can call this SD ($\bar{x}$)).
-- **Central Limit Theorem**: The population has a normal distribution or the sample size is large ($n \ge 30$), the shape will be normal. If the population distribution has unknown shape and $n < 30$, use a graph of the sample data to assess the Normality of the population. Do not use t procedures if the graph shows strong skewness or outliers. 
+- The sample data come from a well-designed random population or randomized experiment of size $n$ with mean $\mu$ and standard deviation, the sampling distribution of sample means has following characters:
+  + **Shape**: If the population distribution is **normal**, then so is the sampling distribution of $\bar{x}$; If the population distribution **isn’t normal**, the sampling distribution of $\bar{x}$ will be approximately **normal** if the sample size is large enough by the central limit theorem (CLT).
+  + **Center**: $\mu_{\bar{x}} = \mu$ (The sampling mean equals to the population mean)
+  + **Spread**: $\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}$ (The sampling standard deviation equal to $\frac{\sigma}{\sqrt{n}}$ of the population SD)
+- **Central Limit Theorem**: The population has a normal distribution or the sample size is large (n ≥ 30), the shape of sampling distribution will be normal. If the population distribution has unknown shape and n < 30, use a graph of the sample data to assess the Normality of the population. Do not use t procedures if the graph shows strong skewness or outliers. 
 
 # Investigation 2.5: t-test
 
 - Standard deviation of statistic: $SE(\bar{x}) = \frac{s}{\sqrt{n}}$
 - To test the hypothesis $H_0: \mu = \mu_0$, compute the one-sample t statistic. 
   ![t statistic](./5.png)
-- Then find the P-value by calculating the probability of getting a t statistic this large or larger in the direction specified by the alternative hypothesis $H_a$ in a t distribution with df (degrees of freedom) = n – 1: 
+- When we perform inference about a population mean m using a t distribution, the appropriate degrees of freedom are found by subtracting 1 from the sample size n, making df (degrees of freedom) = n − 1.
+  ![t tests](./Ch2_1.png)
+(t distribution with 2 and 9 degrees of freedom, and all are symmetric with center 0)
+<br>
+- Then find the P-value by calculating the probability of getting a t statistic this large or larger in the direction specified by the alternative hypothesis $H_a$ in a t distribution with df= n – 1: 
   ![t tests](./6.png)
 
 - **P-Value**: The P-value is based on a t-distribution with n 1 degrees of freedom. This value can be estimated in R. 
