@@ -71,6 +71,8 @@ residuals <- cats.model$residuals
 hist(residuals) 
 qqnorm(residuals)
 ```
+<br>
+
 # Investigation 5.8
 - **Regression line**: a line that describes how a response variable y changes as an explanatory variable x change, and a regression line is used to predict the value of y for a given value of x.
 - **Residual**: the difference between an observed value of the response variable and the value predicted by the regression line. 
@@ -89,6 +91,9 @@ qqnorm(residuals)
     - The standard deviation of y (call it s) is the same for all values of x. 
     - For any fixed value of x, the response y varies according to a Normal distribution.
     ![](./Ch5_4.png)
+
+<br>
+
 # Investigation 5.13
 - Prediction Intervals in R
 ```{r}
